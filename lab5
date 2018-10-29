@@ -1,0 +1,93 @@
+#Name: Triet Truong
+#Email: tmt322@drexel.edu
+#Date: 10/28/2018
+#Assignment: lab5
+#Part 1: Answers to programming style chapter 1 of textbook
+Q1.1: Names for variables can cause confusion because by convention False is 0 and True is 1.
+The values are needlessly complicated. ch = getchar() should be set separately and the last line should be eof = True
+Q1.2: int is_first_variable_smaller(Char *s, char *t) {
+	if (strcmp(s,t) < 1)
+		return 1;
+	return 0;
+}
+Q1.3: Chosen names are unreadable
+Q1.4:
+a)
+if (c != 'y' && c != 'Y')
+			return;
+
+b)
+if (length >= BUFSIZE)
+	length = BUFSIZE;
+
+c)#Since flag by default exists as an empty character or 0
+flag = !flag;
+
+d)
+quote = 0;
+if (*line == '"')
+	quote = 1;
+
+e)
+bit = val & 1;
+
+Q1.5: The function "insert" and "graph" was not specified. 
+
+Q1.6:
+if the first n++ is evaluated first, the output is 
+1 2
+
+if the second n++ is evaluated first, the output is
+2 1
+
+Another scenario could be
+1 1
+
+n++ means return the value of n before incremental effect takes place. If the machine decides that evaluation of one of the term does not qualify as an 'action' on the other term, both incremental effects have not occurred before printing of n
+
+Q1.7:
+a)
+if ((!istty(stdin)) && (!istty(stdout)) && (!istty(stderr)))
+	return 0;
+
+b)
+return retval;
+
+c)
+for (k = 0; k < 4; k++) {
+	scanf("%lf", &dx);
+	x += dx
+}
+
+Q1.8:
+The 'total' variable was not declared. 
+The list does not count the first member of 'this' because count increases to 1 before the first iteration ends.
+for (count = 0; count < total; count++) {
+	if (this.getName(count) == nametable.userName()) {
+		return True;
+	}
+}
+
+Q1.9:
+There are missing parentheses. Also since 'c' is called twice, different values will be called for (c>='0') and (c<=9) if c=getdigit().
+
+Q1.10:
+#define feetToMeter 0.3048
+#define meterToFeet 3.28084
+#define mileToFeet 5280.0
+#define mileToKm 1.609344
+#define squaremileTosqarekm 2.589988
+
+Q1.11:
+a)
+The comment claims that the code returns a number but the code is stated to be 'void'
+
+b)
+The comment only expain n%2 which is already common knowledge without explaining the significant of n > Max
+
+c)
+The comment before the function does not explain what message is written (does not explain what the function do)
+The comments inside the function is not helpful as it repeats the explanation for line_number without explaining what is being printed.
+
+
+
